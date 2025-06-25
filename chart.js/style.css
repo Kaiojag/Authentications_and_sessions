@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+input[type="number"], select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 48%;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#botoes {
+  display: flex;
+  justify-content: space-between;
+}
+#listaGastos {
+  margin-top: 25px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+#listaGastos h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+#listaGastos ul {
+  list-style: none;
+  padding-left: 0;
+}
+#listaGastos li {
+  padding: 6px 4px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #555;
+}
+canvas {
+  display: block;
+  max-width: 100%;
+  margin-top: 30px;
+}
