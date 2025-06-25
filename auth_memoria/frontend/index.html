@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Cadastro e Login</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main>
+    <h1>Teste de Cadastro e Login</h1>
+
+    <section class="form-section">
+      <h2>Cadastro</h2>
+      <input type="email" id="cadastroEmail" placeholder="E-mail">
+      <input type="password" id="cadastroSenha" placeholder="Senha">
+      <button onclick="cadastrar()">Cadastrar</button>
+    </section>
+
+    <section class="form-section">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="E-mail">
+      <input type="password" id="loginSenha" placeholder="Senha">
+      <button onclick="logar()">Entrar</button>
+    </section>
+
+    <div class="resultado" id="resultado"></div>
+
+
+    <section class="form-section">
+      <h2>Lista de Usuários</h2>
+      <button onclick="listarUsuarios()">Mostrar Usuários</button>
+      <pre id="usuariosList"></pre>
+    </section>
+
+  </main>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
