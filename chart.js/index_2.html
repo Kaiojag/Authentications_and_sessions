@@ -9,9 +9,36 @@
 <body>
     <canvas id="grafico"></canvas>
     <script>
-        const ctx = document.getElementById('grafico');
+/* 
+        const config = {
+                type: 'line',
+                data: {},
+                options: {},
+                plugins: []
+                } */
 
+        const ctx = document.getElementById('grafico');
         new Chart(ctx, {
+            type: 'line',
+            data: {
+                //3 pts no eixo x, janeiro,fevereiro e março
+                labels: ['Janeiro', 'Fevereiro', 'Março'],
+                //lista de conjuntos de dados a serem plotados. 
+                datasets: [{
+                    label: 'Vendas', //nome do conjunto de dados (aparece na legenda).
+                    data: [10, 20, 15], //os valores numéricos (ligados aos rótulos).
+                    //backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // cores das fatias
+                    borderColor: 'blue',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                //faz o gráfico ajustar seu tamanho automaticamente ao tamanho da tela.
+                responsive: true
+            }
+        });
+
+/*         new Chart(ctx, {
             type: 'bar',
             data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -28,7 +55,7 @@
                     }
                 }
             }
-        });
+        }); */
     </script>
 </body>
 </html>
