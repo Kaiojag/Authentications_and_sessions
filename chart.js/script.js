@@ -1,8 +1,8 @@
 const btnAdicionar = document.getElementById('btnAdicionar');
 const btnMostrarGrafico = document.getElementById('btnMostrarGrafico');
 const ulGastos = document.getElementById('ulGastos');
-const canvasGrafico = document.getElementById('graficoPizza');
-const ctx = canvasGrafico.getContext('2d');
+const ctx = document.getElementById('graficoPizza');
+//const ctx = canvasGrafico.getContext('2d');
 
 // Array para armazenar os gastos individuais
 const listaDeGastos = [];
@@ -61,7 +61,8 @@ btnAdicionar.addEventListener('click', () => {
   categoriaInput.selectedIndex = 0;
 
   // Esconde o gráfico se estiver visível para forçar atualização no próximo clique
-  canvasGrafico.style.display = 'none';
+  //canvasGrafico
+  ctx.style.display = 'none';
 });
 
 btnMostrarGrafico.addEventListener('click', () => {
@@ -73,7 +74,8 @@ btnMostrarGrafico.addEventListener('click', () => {
   const dadosAgrupados = agregadorPorCategoria();
 
   // Exibe canvas
-  canvasGrafico.style.display = 'block';
+  //canvasGrafico
+  ctx.style.display = 'block';
 
   // Se já existir gráfico, destrói para recriar
   if (grafico) {
@@ -96,11 +98,12 @@ btnMostrarGrafico.addEventListener('click', () => {
       responsive: true,
       plugins: {
         legend: { position: 'bottom' },
-        tooltip: {
+        tooltip: { //é o texto mostrado no hover
           callbacks: {
-            label: function(context) {
-              let label = context.label || '';
-              let value = context.parsed || 0;
+            label: function(context) { //função anônima
+              //O context é um objeto com informações sobre o ponto atual do gráfico (categoria, valor, índice etc.).
+              let label = context.label || ''; //label OU vazio
+              let value = context.parsed || 0; //parsed é o número que o Chart.js já entendeu do dado original.
               return label + ': R$ ' + value.toFixed(2);
             }
           }
