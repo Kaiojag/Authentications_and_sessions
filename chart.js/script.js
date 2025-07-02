@@ -4,7 +4,7 @@ const ulGastos = document.getElementById('ulGastos');
 const ctx = document.getElementById('graficoPizza');
 //const ctx = canvasGrafico.getContext('2d');
 
-// Array para armazenar os gastos individuais
+// Array para armazenar os gastos individuais em objetos.    
 const listaDeGastos = [];
 
 // Inicialmente nenhum gráfico

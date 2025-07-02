@@ -19,7 +19,7 @@
 
         const ctx = document.getElementById('grafico');
         new Chart(ctx, {
-            type: 'line',
+            type: 'pie',
             data: {
                 //3 pts no eixo x, janeiro,fevereiro e março
                 labels: ['Janeiro', 'Fevereiro', 'Março'],
@@ -27,9 +27,9 @@
                 datasets: [{
                     label: 'Vendas', //nome do conjunto de dados (aparece na legenda).
                     data: [10, 20, 15], //os valores numéricos (ligados aos rótulos).
-                    //backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // cores das fatias
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // cores das fatias
                     borderColor: 'blue',
-                    borderWidth: 2
+                    borderWidth: 1
                 }]
             },
             options: {
